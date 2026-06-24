@@ -77,10 +77,19 @@ Is a daily whole-library refresh "too much"? No, because it trickles instead of
 bursting. That is the safe pattern even against an API: paced, incremental, and
 self-throttling on a 429.
 
-## Preferences
+## Preferences pane and coverage report
 
-Set under `extensions.zotero.opencitations.*` (Settings -> Advanced -> Config
-Editor in Zotero):
+Settings -> **Open Citations** opens a dedicated pane with all the controls
+below (no Config Editor needed) plus a live **Citation coverage report**:
+plugin version and active source; library size; how many items have a count
+(coverage %), how many returned no data, and how many are not yet checked;
+total / average / most-cited; a per-source breakdown; the last-updated and
+last-daily-run times; and the top 5 most-cited items. It also has a
+**"Update entire library now"** button that runs the full sweep and
+auto-refreshes the numbers as it goes.
+
+The same prefs are also under `extensions.zotero.opencitations.*` in the Config
+Editor:
 
 | Pref | Default | Meaning |
 |---|---|---|

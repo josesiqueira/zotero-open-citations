@@ -1,0 +1,38 @@
+<vbox xmlns:html="http://www.w3.org/1999/xhtml">
+  <groupbox>
+    <html:h2>Open Citations &#8212; settings</html:h2>
+    <hbox align="center">
+      <label value="Primary source:" style="min-width:16em"/>
+      <menulist id="zoc-primary">
+        <menupopup>
+          <menuitem value="openalex" label="OpenAlex"/>
+          <menuitem value="semanticscholar" label="Semantic Scholar"/>
+        </menupopup>
+      </menulist>
+    </hbox>
+    <checkbox id="zoc-fallback" label="Use the other source as a fallback when the primary misses"/>
+    <hbox align="center">
+      <label value="Contact email (OpenAlex polite pool):" style="min-width:16em"/>
+      <html:input id="zoc-email" type="email" style="flex:1" placeholder="you@example.org"/>
+    </hbox>
+    <checkbox id="zoc-autodaily" label="Run the daily background refresh"/>
+    <hbox align="center">
+      <label value="Refresh items older than (days):" style="min-width:16em"/>
+      <html:input id="zoc-staledays" type="number" min="1" style="width:6em"/>
+    </hbox>
+    <hbox align="center">
+      <label value="Max items per daily pass:" style="min-width:16em"/>
+      <html:input id="zoc-dailymax" type="number" min="1" style="width:6em"/>
+    </hbox>
+    <checkbox id="zoc-writeextra" label="Also write the count into the Extra field (syncs across devices)"/>
+  </groupbox>
+
+  <groupbox>
+    <html:h2>Citation coverage report</html:h2>
+    <hbox>
+      <button id="zoc-refresh" label="Refresh report"/>
+      <button id="zoc-updateall" label="Update entire library now"/>
+    </hbox>
+    <html:pre id="zoc-report" style="white-space:pre-wrap;font-family:monospace;font-size:1.05em;margin-top:8px;padding:8px;border:1px solid var(--fill-quinary,#ccc);border-radius:5px;min-height:8em">Loading report&#8230;</html:pre>
+  </groupbox>
+</vbox>
