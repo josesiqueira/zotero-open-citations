@@ -1,0 +1,8 @@
+# build artifacts
+*.xpi
+update.json
+
+# editor / OS
+.DS_Store
+*.swp
+node_modules/
