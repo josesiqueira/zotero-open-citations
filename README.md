@@ -61,9 +61,12 @@ machine.
 
 ## How updates run
 
-- **Right-click an item** -> "Update citation count (Open Citations)".
+- **Right-click an item** (or a multi-selection) -> "Update citation count (Open Citations)". Tip: press Ctrl+A / Cmd+A in the item list first to update everything you can see.
 - **Right-click a collection** -> "Update citations in collection (Open Citations)".
-- **Tools menu** -> "Update all stale citations now (Open Citations)".
+- **Tools menu** -> "Update entire library now (Open Citations)" sweeps the whole library, uncapped (it asks for confirmation past 100 items).
+- **Tools menu** -> "Update stale citations now (Open Citations)" refreshes only stale items, up to `dailyMax` per click (the same job the daily timer runs).
+
+The context-menu and Tools entries carry a small citation icon.
 - **Daily background trickle** (on by default): about once every 24h it refreshes
   only items not updated in the last `staleDays` (default 30), oldest first, one
   at a time with randomized 1.5-4s gaps, capped at `dailyMax` (default 50) per
@@ -104,7 +107,7 @@ This is a build-free bootstrap plugin. To make the installable XPI:
 
 ```
 cd zotero-open-citations
-zip -r -X ../zotero-open-citations.xpi manifest.json bootstrap.js lib README.md CREDITS.md LICENSE
+zip -r -X ../zotero-open-citations.xpi manifest.json bootstrap.js lib icons README.md CREDITS.md LICENSE
 ```
 
 Then in Zotero: Tools -> Plugins (or Add-ons) -> gear -> Install Plugin From File

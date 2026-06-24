@@ -1,11 +1,15 @@
 {
   "manifest_version": 2,
   "name": "Zotero Open Citations",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Adds a sortable Citation column to Zotero using open citation data from OpenAlex and Semantic Scholar. Paced, captcha-free, with an optional once-a-day background refresh. Works on Zotero 7, 8, and 9.",
   "author": "Jose Siqueira de Cerqueira",
   "homepage_url": "https://github.com/josesiqueira/zotero-open-citations",
-  "icons": {},
+  "icons": {
+    "32": "icons/citation.svg",
+    "48": "icons/citation.svg",
+    "96": "icons/citation.svg"
+  },
   "applications": {
     "zotero": {
       "id": "open-citations@zotero-plugin.org",
