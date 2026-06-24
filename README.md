@@ -31,12 +31,16 @@ at ~60 items while ~3 sails through.
 
 So this plugin uses real citation APIs instead, which never captcha:
 
-- **OpenAlex** (primary, default) — free, no API key, 250M+ works, excellent DOI
-  matching. Counts run somewhat lower than Google Scholar.
-- **Semantic Scholar** (fallback) — free, counts closer to Scholar, but a shared
-  rate limit (~1 request / 3-4s), so it is paced and used as a backup.
+- **OpenAlex** (primary, default) — free, **no API key**, 250M+ works, excellent
+  DOI matching. Counts run somewhat lower than Google Scholar.
+- **Crossref** (fallback) — free, **no API key**, reliable, matches by DOI
+  (count = `is-referenced-by-count`). Counts are conservative but real.
+- **Semantic Scholar** (optional) — counts closer to Scholar, but its anonymous
+  pool 429s constantly, so it is used **only if you set an API key** (its `1
+  req/s` authenticated lane). Off by default; nobody needs a key.
 
-You still get a sortable citation column; you just get it reliably.
+Because the two default sources need no key, the plugin works for everyone with
+zero setup. You still get a sortable citation column; you just get it reliably.
 
 ## The "Citation" column
 
@@ -93,9 +97,10 @@ Editor:
 
 | Pref | Default | Meaning |
 |---|---|---|
-| `primarySource` | `openalex` | `openalex` or `semanticscholar` |
-| `useFallback` | `true` | try the other source when the primary misses |
-| `email` | `""` | your email for OpenAlex's polite pool (recommended) |
+| `primarySource` | `openalex` | `openalex`, `crossref`, or `semanticscholar` |
+| `useFallback` | `true` | try the other sources when the primary misses |
+| `email` | `""` | your email for the OpenAlex/Crossref polite pool (recommended) |
+| `s2ApiKey` | `""` | optional Semantic Scholar key; S2 is skipped entirely when blank |
 | `autoDaily` | `true` | run the daily background refresh |
 | `staleDays` | `30` | only refresh items older than this |
 | `dailyMax` | `50` | max items refreshed per daily pass |

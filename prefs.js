@@ -22,6 +22,7 @@ var ZOC_Prefs = {
       this.$("zoc-primary").value = this.get("primarySource", "openalex");
       this.$("zoc-fallback").checked = !!this.get("useFallback", true);
       this.$("zoc-email").value = this.get("email", "");
+      this.$("zoc-s2key").value = this.get("s2ApiKey", "");
       this.$("zoc-autodaily").checked = !!this.get("autoDaily", true);
       this.$("zoc-staledays").value = this.get("staleDays", 30);
       this.$("zoc-dailymax").value = this.get("dailyMax", 50);
@@ -33,6 +34,8 @@ var ZOC_Prefs = {
         () => this.set("useFallback", this.$("zoc-fallback").checked));
       this.$("zoc-email").addEventListener("change",
         () => this.set("email", this.$("zoc-email").value.trim()));
+      this.$("zoc-s2key").addEventListener("change",
+        () => this.set("s2ApiKey", this.$("zoc-s2key").value.trim()));
       this.$("zoc-autodaily").addEventListener("command",
         () => this.set("autoDaily", this.$("zoc-autodaily").checked));
       this.$("zoc-staledays").addEventListener("change",

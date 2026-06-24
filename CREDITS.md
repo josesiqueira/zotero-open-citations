@@ -50,5 +50,7 @@ for, and continuity with, that lineage.
 - **OpenAlex** — <https://openalex.org> (open catalog of scholarly works;
   `cited_by_count`). Please set your email in the `email` pref to use OpenAlex's
   polite pool.
+- **Crossref** — <https://www.crossref.org> (REST API; `is-referenced-by-count`).
+  The same `email` pref is used for Crossref's polite pool.
 - **Semantic Scholar** — <https://www.semanticscholar.org> (Academic Graph API;
-  `citationCount`).
+  `citationCount`). Optional, used only when an API key is configured.

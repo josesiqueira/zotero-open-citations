@@ -5,16 +5,22 @@
       <label value="Primary source:" style="min-width:16em"/>
       <menulist id="zoc-primary">
         <menupopup>
-          <menuitem value="openalex" label="OpenAlex"/>
-          <menuitem value="semanticscholar" label="Semantic Scholar"/>
+          <menuitem value="openalex" label="OpenAlex (no key)"/>
+          <menuitem value="crossref" label="Crossref (no key)"/>
+          <menuitem value="semanticscholar" label="Semantic Scholar (needs key)"/>
         </menupopup>
       </menulist>
     </hbox>
-    <checkbox id="zoc-fallback" label="Use the other source as a fallback when the primary misses"/>
+    <checkbox id="zoc-fallback" label="Use the other sources as fallbacks when the primary misses"/>
     <hbox align="center">
-      <label value="Contact email (OpenAlex polite pool):" style="min-width:16em"/>
+      <label value="Contact email (OpenAlex/Crossref polite pool):" style="min-width:16em"/>
       <html:input id="zoc-email" type="email" style="flex:1" placeholder="you@example.org"/>
     </hbox>
+    <hbox align="center">
+      <label value="Semantic Scholar API key (optional):" style="min-width:16em"/>
+      <html:input id="zoc-s2key" type="text" style="flex:1" placeholder="leave blank to skip Semantic Scholar"/>
+    </hbox>
+    <description style="margin:0 0 4px 16em;opacity:0.7">Semantic Scholar is only used when a key is set; OpenAlex and Crossref need no key.</description>
     <checkbox id="zoc-autodaily" label="Run the daily background refresh"/>
     <hbox align="center">
       <label value="Refresh items older than (days):" style="min-width:16em"/>
