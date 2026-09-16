@@ -1,6 +1,6 @@
 # Zotero Open Citations
 
-A modern **Zotero 7, 8, and 9** plugin that adds a sortable **Citation** column
+A modern **Zotero 7 to 10** plugin that adds a sortable **Citation** column
 to your library, filled from open citation APIs (OpenAlex and Semantic Scholar).
 It can keep your whole library refreshed automatically once a day, with no
 clicking and no captchas.
@@ -112,7 +112,7 @@ reliable for identified callers.
 
 ## Compatibility
 
-Zotero **7, 8, and 9** (`strict_min_version` 6.999, `strict_max_version` 9.*).
+Zotero **7 to 10** (`strict_min_version` 6.999, `strict_max_version` 10.*).
 Bootstrapped plugin, no XUL overlay.
 
 ## Install
