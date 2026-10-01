@@ -2,7 +2,7 @@
 
 `zotero-open-citations` stands on the shoulders of the original **Zotero Scholar
 Citations** plugin and its community. It is an independent rewrite for the
-modern Zotero 7/8/9 bootstrap architecture, and it changes the data source from
+modern Zotero bootstrap architecture, and it changes the data source from
 Google Scholar scraping to open citation APIs (OpenAlex, Semantic Scholar). The
 core idea — fetch a citation count for each item and make the library sortable
 by it — and the `ZSCC:` `extra`-field marker come directly from that lineage.
@@ -33,7 +33,7 @@ by it — and the `ZSCC:` `extra`-field marker come directly from that lineage.
 ## This rewrite
 
 - **Jose Siqueira de Cerqueira** ([@josesiqueira](https://github.com/josesiqueira))
-  — Zotero 7/8/9 bootstrap rewrite, the OpenAlex / Semantic Scholar data
+  — bootstrap rewrite, the OpenAlex / Semantic Scholar data
   sources, the registered "Citation" item-tree column, and the paced daily
   background refresh.
 
