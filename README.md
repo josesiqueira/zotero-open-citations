@@ -5,8 +5,8 @@ to your library, filled from open citation APIs (OpenAlex and Semantic Scholar).
 It can keep your whole library refreshed automatically once a day, with no
 clicking and no captchas.
 
-> Lineage: this is an independent rewrite for the Zotero 7+ bootstrap
-> architecture of the original
+> Lineage: this is an independent rewrite, as a modern bootstrap
+> plugin, of the original
 > [beloglazov/zotero-scholar-citations](https://github.com/beloglazov/zotero-scholar-citations)
 > and the maintained
 > [MaxKuehn fork](https://github.com/MaxKuehn/zotero-scholar-citations). It keeps
@@ -109,15 +109,6 @@ Editor:
 
 Tip: set `email` to your address. OpenAlex's "polite pool" is faster and more
 reliable for identified callers.
-
-## Compatibility
-
-Requires Zotero 7 or later. The exact range each release supports is
-declared in `manifest.json` (`strict_max_version`). When a new Zotero major
-ships, the ceiling is raised through `update.json`, so installed copies stay
-enabled without a reinstall.
-
-Bootstrapped plugin, no XUL overlay.
 
 ## Install
 
